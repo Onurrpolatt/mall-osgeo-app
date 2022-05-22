@@ -41,7 +41,7 @@ var developmentDatabase = {
     return null;
     }
     module.exports = {
-    hostname: "http://localhost",
+    hostname: "https://adorable-strudel-ec3fb4.netlify.app/",
     port: 5656,
     database: {
     postgres: developmentDatabase.postgres
