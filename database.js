@@ -15,7 +15,7 @@ var options = {
 function getAllLocations(cb) {
   console.log(cb);
   DATABASE_PGB.any(
-    "SELECT ST_X(loc) as longitude, ST_Y(loc) as latitude from trees"
+    "SELECT mall_name,total_area,total_floor,shop_number,number_elevator,free_wifi,number_parking,prayer_room,baby_room,infirmary,atm,vale,cinema,fitness_center,car_charge,  ST_X(mall_coords) as longitude, ST_Y(mall_coords) as latitude, photo_url_node FROM public.mall_services"
   )
     .then(function (data) {
       cb(null, data);

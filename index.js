@@ -12,13 +12,14 @@ app.get("/", function (req, res, next) {
 app.use("/api/data", function (req, res) {
   DATABASE.getAllLocations(function (err, data) {
     if (err) {
-        console.log(err.code);
+        console.log(err);
       res.sendStatus(500);
     } else {
       res.send(data);
     }
   });
 });
+
 app.listen(process.env.PORT || 4000, function () {
   console.log(
     "Express server listening on port %d in %s mode",
